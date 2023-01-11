@@ -1,0 +1,11 @@
+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
+
+ at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+2023-01-11_05:19:09.26113       at java.base/java.lang.Thread.run(Unknown Source)
+2023-01-11_05:19:09.26113 Caused by: org.eclipse.jgit.errors.NoRemoteRepositoryException: https://github.com/JsleeSoftworks/: https://github.com/JsleeSoftworks/info/refs?service=git-upload-pack not found: Not Found
+2023-01-11_05:19:09.26113       at org.eclipse.jgit.transport.TransportHttp.createNotFoundException(TransportHttp.java:600)
+2023-01-11_05:19:09.26113       at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:668)
+2023-01-11_05:19:09.26113       at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:465)
+2023-01-11_05:19:09.26114       at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:167)
+2023-01-11_05:19:09.26114       ... 134 common frames omitted
+2023-01-11_05:19:09.26339 '[2023-01-11 05:19:09,263] [http-nio-127.0.0.1-8080-exec-47] WARN  c.m.a.CmController - validation error on integration: {success=false, errors={}, msg=https://github.com/JsleeSoftworks/: https://github.com/JsleeSoftworks/info/refs?service=git-upload-pack not found: Not Found}
