@@ -1,0 +1,5 @@
+- name: Create a new key pair
+  ec2_key:
+    name: mykey
+    key_material: "{{ mykey_pem_content }}"
+    state: present
