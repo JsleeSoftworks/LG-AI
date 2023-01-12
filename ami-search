@@ -1,0 +1,18 @@
+---
+- name: AMI search
+  hosts: localhost
+  become: false
+  gather_facts: false
+  vars:
+    aws_region: "ap-northeast-2	"
+    aws_name: "amzn2-ami-hvm-2.0.20200406.0-x86_64-gp2"
+  tasks:
+    - name: search for AMI
+      amazon.aws.ec2_ami_info:
+        filters:
+          name: "{{ aws_name }}"
+          region: "{{ aws_region }}"
+      register: ami_found
+    - name: print AMI
+      ansible.builtin.debug:
+        var: ami_found
